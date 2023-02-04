@@ -14,6 +14,9 @@ const Result = ({ state }) => {
         <p className="label">Preço do item 2</p>{" "}
         <p className="result">{`$ ${preçoitem2}/g`}</p>
       </div>
+      <div>
+        <p className="obs">*Quanto menor o numero mais barato</p>
+      </div>
       
 
     </div>
