@@ -1,5 +1,5 @@
-import Form from "../components/Form";
-import Result from "../components/Result";
+import Form from "../components/Form.jsx";
+import Result from "../components/Result.jsx";
 import { useState } from "react";
 export default function Home() {
   const [state, setState] = useState({
