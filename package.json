@@ -1,5 +1,5 @@
 {
-  "name": "tentativa",
+  "name": "comparador",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dyhueda/tentativa.git"
+    "url": "git+https://github.com/dyhueda/comparador.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dyhueda/tentativa/issues"
+    "url": "https://github.com/dyhueda/comparador/issues"
   },
-  "homepage": "https://github.com/dyhueda/tentativa#readme",
+  "homepage": "https://github.com/dyhueda/comparador#readme",
   "dependencies": {
     "next": "^13.1.6",
     "react": "^18.2.0",
