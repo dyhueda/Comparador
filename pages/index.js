@@ -1,6 +1,7 @@
-import { Form } from "../components/Form.jsx";
-import { Result } from "../components/Result.jsx";
 import { useState } from "react";
+import Form from "../Components/Form";
+import Result from "../Components/Result";
+
 export default function Home() {
   const [state, setState] = useState({
     quantidade1: 1,
