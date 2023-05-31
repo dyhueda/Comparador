@@ -10,6 +10,8 @@ export default function Home() {
     price2: 1,
     measure1: 1,
     measure2: 1,
+    type1:'g',
+    type2:'g'
   });
 
   const updateValues = (newState) => {

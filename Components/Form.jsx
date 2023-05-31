@@ -3,7 +3,7 @@ import React from "react";
 const Form = ({ state, updateValues }) => {
   const { quantity1, quantity2, price1, price2, measure1, measure2,type1, type2 } = state;
   const quantities = [1, 2, 5, 6, 8, 10, 12, 15]
-  const measures = [75, 50, 100, 150, 350, 500, 700, 1500, 2000]
+  const measures = [1, 75, 50, 100, 150, 350, 500, 700, 1500, 2000]
   const types=['g','ml', 'cm']
   return (
     <section className="section">
