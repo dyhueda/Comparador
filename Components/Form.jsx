@@ -1,97 +1,183 @@
 import React from "react";
 
 const Form = ({ state, updateValues }) => {
-  const { quantidade1, quantidade2, preco1, preco2, medida1, medida2 } = state;
+  const { quantity1, quantity2, price1, price2, measure1, measure2,type1, type2 } = state;
+  const quantities = [1, 2, 5, 6, 8, 10, 12, 15]
+  const measures = [75, 50, 100, 150, 350, 500, 700, 1500, 2000]
+  const types=['g','ml', 'cm']
   return (
-    <section className="section">  
-      <div className="input-container">
+    <section className="section">
+      <div className="input-container-left">
         <div className="input-group">
-          <label htmlFor="Quantidade Item 1">Quantidade da Primeira Opção</label>
+          <label>First item quantity</label>
           <input
             onChange={(e) => {
               updateValues({
-                quantidade1: e.target.value,
+                quantity1: e.target.value,
               });
             }}
-            value={quantidade1}
+            value={quantity1}
             type="number"
-            id="quantidade1"
+            id="quantity1"
           />
+          <div>
+            {quantities.map((q) => {
+              return (
+                <div
+                  className={`button ${quantity1 == q ? "active" : ""
+                    }`}
+                  onClick={() => {
+                    updateValues({ quantity1: q });
+                  }}
+                  key={q}
+                >{`${q}`}</div>
+              )
+            })}
+          </div>
         </div>
         <div className="input-group">
-          <label htmlFor="Unidade de Medida Primeiro Item">Peso da Primeira Opção</label>
+          <label>First item:</label>
+          <div>
+            {types.map((t) => {
+              return (
+                <div
+                  className={`button ${type1 == t ? "active" : ""
+                    }`}
+                  onClick={() => {
+                    updateValues({ type1: t });
+                  }}
+                  key={t}
+                >{`${t}`}</div>
+              )
+            })}
+          </div>
           <input
             onChange={(e) => {
               updateValues({
-                medida1: e.target.value,
+                measure1: e.target.value,
               });
             }}
-            value={medida1}
+            value={measure1}
             type="number"
-            id="medida1"
+            id="measure1"
           />
+          <div>
+            {measures.map((m) => {
+              return (
+                <div
+                  className={`button ${measure1 == m ? "active" : ""
+                    }`}
+                  onClick={() => {
+                    updateValues({ measure1: m });
+                  }}
+                  key={m}
+                >{`${m}`}</div>
+              )
+            })}
+          </div>
         </div>
-            
+
         <div className="input-group">
-          <label htmlFor="Preco do item 1">Preço da Primeira Opção</label>
+          <label>First item price</label>
           <input
             onChange={(e) => {
               updateValues({
-                preco1: e.target.value,
+                price1: e.target.value,
               });
             }}
-            value={preco1}
+            value={price1}
             type="number"
-            id="preco1"
+            id="price1"
           />
         </div>
-        
       </div>
-      <div className="input-container">
-      <div className="input-group">
-          <label htmlFor="Quantidade Item 2">Quantidade da Segunda Opção</label>
+      <div className="input-container-right">
+        <div className="input-group">
+          <label>Second item quantity</label>
           <input
             onChange={(e) => {
               updateValues({
-                quantidade2: e.target.value,
+                quantity2: e.target.value,
               });
             }}
-            value={quantidade2}
+            value={quantity2}
             type="number"
-            id="quantidade2"
+            id="quantity2"
           />
+          <div>
+            {quantities.map((q) => {
+              return (
+                <div
+                  className={`button ${quantity2 == q ? "active" : ""
+                    }`}
+                  onClick={() => {
+                    updateValues({ quantity2: q });
+                  }}
+                  key={q}
+                >{`${q}`}</div>
+              )
+            })}
+          </div>
         </div>
         <div className="input-group">
-          <label htmlFor="Unidade de Medida Segundo Item">Peso da Segunda Opção</label>
+          <label>Second item:</label>
+          <div>
+            {types.map((t) => {
+              return (
+                <div
+                  className={`button ${type2 == t ? "active" : ""
+                    }`}
+                  onClick={() => {
+                    updateValues({ type2: t });
+                  }}
+                  key={t}
+                >{`${t}`}</div>
+              )
+            })}
+          </div>
           <input
             onChange={(e) => {
               updateValues({
-                medida2: e.target.value,
+                measure2: e.target.value,
               });
             }}
-            value={medida2}
+            value={measure2}
             type="number"
-            id="medida2"
+            id="measure2"
           />
+          <div>
+            {measures.map((m) => {
+              return (
+                <div
+                  className={`button ${measure2 == m ? "active" : ""
+                    }`}
+                  onClick={() => {
+                    updateValues({ measure2: m });
+                  }}
+                  key={m}
+                >{`${m}`}</div>
+              )
+            })}
+          </div>
         </div>
-            
+
         <div className="input-group">
-          <label htmlFor="Preco do item 2">Preço da Segunda Opção</label>
+          <label>Second item price</label>
           <input
             onChange={(e) => {
               updateValues({
-                preco2: e.target.value,
+                price2: e.target.value,
               });
             }}
-            value={preco2}
+            value={price2}
             type="number"
-            id="preco2"
+            id="price2"
           />
         </div>
 
       </div>
     </section>
-    
+
   );
 };
 
